@@ -469,12 +469,11 @@ BEGIN
 END //
 DELIMITER ;
 CALL PedidoMayorValor();
-
+```
 # Funciones Definidas por el Usuario en MySQL
 
 ## 1. Función para calcular días transcurridos desde una fecha dada
 ```sql
-DELIMITER //
 CREATE FUNCTION DiasTranscurridos(fecha DATE) RETURNS INT DETERMINISTIC
 BEGIN
     RETURN DATEDIFF(CURDATE(), fecha);
